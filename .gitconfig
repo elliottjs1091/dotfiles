@@ -1,0 +1,13 @@
+[user]
+	name = James
+	email = elliottjs1091@gmail.com
+[color]
+	ui = auto
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[core]
+	excludesfile = /Users/jameselliott/.gitignore_global
+[init "default"]
+	Branch = main
