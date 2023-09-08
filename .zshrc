@@ -1,20 +1,29 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
+
+#################################  OHMYZSH CONFIGS  #################################
 export ZSH=$HOME/.oh-my-zsh
-
 ZSH_THEME="gallifrey"
-
 plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
 
+#################################  HISTORY  #################################
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 setopt SHARE_HISTORY
 
+#################################  COMPLEMENT  #################################
+# enable completion
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}'
+zstyle ':completion:*' format '%B%F{blue}%d%f%b'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:default' menu select=2
+
+
+#################################  SHORTCUT  #################################
 alias zshrc="open ~/.zshrc"
 
 alias clr="clear"
